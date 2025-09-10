@@ -172,7 +172,7 @@ const ServicesSection = () => {
                 {/* Contenu textuel */}
                 <div>
                   <div className={`inline-flex items-center justify-center w-16 h-16 rounded-2xl mb-6 bg-gradient-to-r ${services[activeService].color}`}>
-                    <services[activeService].icon className="text-white" size={32} />
+                   {/*  <services[activeService].icon className="text-white" size={32} /> */}
                   </div>
                   
                   <h3 className="text-3xl font-bold text-accent-900 mb-4">
@@ -246,4 +246,53 @@ const ServicesSection = () => {
                           ? 'bg-gradient-to-br from-green-500 to-green-600' 
                           : index === 1
                           ? 'bg-gradient-to-br from-blue-500 to-blue-600'
-                          :
+                          : 'bg-gradient-to-br from-purple-500 to-purple-600'
+                      }`}
+                    >
+                      <advantage.icon className="text-white" size={32} />
+                    </motion.div>
+                    <h4 className="text-xl font-bold text-accent-900 mb-4">
+                      {advantage.title}
+                    </h4>
+                    <p className="text-accent-600 leading-relaxed">
+                      {advantage.description}
+                    </p>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            ))}
+          </div>
+        </AnimatedSection>
+
+        {/* Call to Action */}
+        <AnimatedSection delay={0.8}>
+          <div className="mt-20 text-center bg-gradient-to-r from-primary-500 to-secondary-600 rounded-3xl p-12 text-white">
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.6 }}
+            >
+              <h3 className="text-3xl font-bold mb-4">
+                Prêt à Développer Votre Business International ?
+              </h3>
+              <p className="text-xl mb-8 opacity-90">
+                Contactez-nous dès aujourd'hui pour une consultation gratuite et découvrez comment 
+                nous pouvons propulser votre entreprise vers le succès international.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Button variant="outline" size="lg" className="bg-white text-primary-600 border-white hover:bg-primary-50">
+                  Consultation Gratuite
+                </Button>
+                <Button size="lg" className="bg-white/20 backdrop-blur-sm border-white/30 hover:bg-white/30">
+                  Nos Réalisations
+                </Button>
+              </div>
+            </motion.div>
+          </div>
+        </AnimatedSection>
+      </Container>
+    </section>
+  );
+};
+
+export default ServicesSection;
