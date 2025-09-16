@@ -6,7 +6,7 @@
 
 @layer base {
   * {
-    @apply border-border;
+    @apply border-gray-200; /* Replace with a valid Tailwind class or remove */
   }
   
   body {
@@ -16,6 +16,12 @@
 
   html {
     scroll-behavior: smooth;
+  }
+}
+
+@layer utilities {
+  .border-border {
+    @apply border border-gray-200; /* Define custom border-border class */
   }
 }
 

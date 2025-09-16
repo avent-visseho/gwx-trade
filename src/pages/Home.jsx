@@ -2,7 +2,7 @@ import React from 'react';
 import Hero from '../components/sections/Hero';
 import AboutSection from '../components/sections/AboutSection';
 import ServicesSection from '../components/sections/ServicesSection';
-import ContactSection from '../components/sections/ContactSection';
+/* import ContactSection from '../components/sections/ContactSection'; */
 
 const Home = () => {
   return (
@@ -10,7 +10,7 @@ const Home = () => {
       <Hero />
       <AboutSection />
       <ServicesSection />
-      <ContactSection />
+    {/*   <ContactSection /> */}
     </>
   );
 };
